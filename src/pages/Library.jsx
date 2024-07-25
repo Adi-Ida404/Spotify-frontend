@@ -40,9 +40,9 @@ export const Library = () => {
             <a href="#genrecard" className="ml-6 text-slate-300 text-base mt-[5px]">
               <button style={{ borderColor: "#424fa8", borderWidth: '0.5px', borderRadius: "40px", width: "140px", backgroundColor: "#111826"}}>Your Top Genres</button>
             </a>
-            <a href="userpage#playlists" className="ml-6 text-slate-300 text-base mt-[5px]">
+            <Link to="/userpage#playlists" className="ml-6 text-slate-300 text-base mt-[5px]">
               <button style={{ borderColor: "#424fa8", borderWidth: '0.5px', borderRadius: "40px", width: "80px", backgroundColor: "#111826"}}>Playlists</button>
-            </a>
+            </Link>
             <a href="#albums" className="ml-6 text-slate-300 text-base mt-[5px]">
               <button style={{ borderColor: "#424fa8", borderWidth: '0.5px', borderRadius: "40px", width: "80px", backgroundColor: "#111826"}}>Albums</button>
             </a>
