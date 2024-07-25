@@ -44,7 +44,7 @@ export const UserPage = () => {
                             </div>
                             <div style={{ width: '100%', height: '0.25px', backgroundColor: '#545454', marginTop: '20px' }}></div>
                             <div id="playlists" className="flex justify-between font-5xl font-Raleway ml-8" style={{ marginTop: "25px" }}>
-                                <b className="text-slate-300 text-base p-1 ">Your Playlists</b>
+                                <b className="text-slate-300 text-base p-1 " id="playlists">Your Playlists</b>
                             </div>
                             <div style={{ alignItems: 'flex-start', marginTop: '15px', marginLeft: '20px', height: '300px' }}>
                                 <AlbumRow title=''/>
