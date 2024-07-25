@@ -14,7 +14,7 @@ export const Login = () => {
       .then(result => {
         console.log(result);
         if (result.data === "Success") {
-          navigate(`${apiUrl}/`); // Navigate to /home on successful login
+          navigate(`/`); // Navigate to /home on successful login
         } else {
           console.log("Login failed");
         }
