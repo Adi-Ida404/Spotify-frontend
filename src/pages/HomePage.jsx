@@ -17,17 +17,15 @@ export const Homepage = () => {
   
   return (
     <>
-      <div className='flex' style={{ height: "550px" }}>
+      <div className='flex h-4/5 bg-slate-950'>
         <Sidebar />
-        <div className="bg-slate-950 pt-4 px-2" style={{ width: "952px" }}>
-          <div className="bg-slate-900">
-            <Header />
-            <div className="overflow-y-auto text-white custom-scrollbar p-2" style={{ height: "450px" }}>
-              <AlbumRow title='Featured'/>
-              <Row title="Top Charts" songs={songsData} />
-              <Row title="Top Charts" songs={songsData} />
-              <Footer />
-            </div>
+        <div className="mt-4 bg-slate-900 w-full mr-2 overflow-y-auto">
+          <Header />
+          <div className="overflow-y-auto text-white custom-scrollbar p-2" style={{ height: "450px" }}>
+            <AlbumRow title='Featured'/>
+            <Row title="Top Charts" songs={songsData} />
+            <Row title="Top Charts" songs={songsData} />
+            <Footer />
           </div>
         </div>
       </div>

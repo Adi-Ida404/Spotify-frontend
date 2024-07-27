@@ -12,13 +12,13 @@ export const Library = () => {
   const containerStyle = {
     backgroundColor: '#020617',
     display: 'flex',
-    height: '100%'
+    height: '80%'
   };
 
   return (
     <div style={containerStyle}>
       <Sidebar />
-      <div className="bg-slate-950 pt-4 px-2" style={{ width: "950px" }}>
+      <div className="mt-4 bg-slate-900 w-full mr-2 overflow-y-auto">
         <Header/>
         <div className="flex bg-slate-900">
           <Link className="ml-6" to="/searchpage">

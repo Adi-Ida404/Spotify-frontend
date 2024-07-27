@@ -22,8 +22,7 @@ export const SearchPage = () => {
   return (
     <div style={containerStyle}>
       <Sidebar />
-      <div className="bg-slate-950 pt-4 px-2" style={{ width: "950px", height:"90vh " }}>
-        <div className="bg-slate-900">
+      <div className="mt-4 bg-slate-900 w-full mr-2 overflow-y-auto">
           <Header />
           <div className="overflow-y-auto text-white custom-scrollbar p-2" style={{ height: "450px" }}>
             <div className="bg-slate-900 text-left text-slate-100 font-semibold font-Raleway mt-4">
@@ -37,7 +36,6 @@ export const SearchPage = () => {
             <Footer/>
           </div>
         </div>
-      </div>
     </div>
   );
 };
