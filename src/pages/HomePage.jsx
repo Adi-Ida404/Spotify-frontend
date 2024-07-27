@@ -17,7 +17,7 @@ export const Homepage = () => {
   
   return (
     <>
-      <div className='flex h-4/5 bg-slate-950'>
+      <div className='flex h-full bg-slate-950'>
         <Sidebar />
         <div className="mt-4 bg-slate-900 w-full mr-2 overflow-y-auto">
           <Header />
