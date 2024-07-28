@@ -17,7 +17,7 @@ export const UserPage = () => {
     return (
         <div className='flex h-full bg-slate-950'>
             <Sidebar />
-                <div className="mt-4 bg-slate-900 w-full mr-2 overflow-y-auto">
+                <div className="mt-4 bg-slate-900 w-full mr-2 overflow-y-auto rounded-lg"> 
                     <Header />
                     <div className="overflow-y-auto text-white custom-scrollbar p-2" style={{ height: "450px" }}>
                         <div className="bg-slate-900 text-left text-slate-100 font-semibold font-Raleway">

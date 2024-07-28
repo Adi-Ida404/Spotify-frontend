@@ -4,7 +4,7 @@ import React from 'react';
 export const Sidebar = () => {
   return (
     <>
-    <div className="m-0 h-11/12 w-3/4 lg:w-3/12 mr-2 mt-4 bg-slate-950 hidden sm:block">
+    <div className="m-0 h-11/12 w-3/4 lg:w-3/12 mr-2 mt-4 bg-slate-950 hidden sm:block rounded-lg">
             <ul className="rounded-sm bg-slate-900 text-slate-300 p-4">
                 <li className=" p-2"><img className="h-6 w-auto" src="https://imgs.search.brave.com/gAASQsi_SWZZJqpGrSlxBdrdObjjSOVwmUI09qMtkfg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9sb2dv/ZG93bmxvYWQub3Jn/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDE2/LzA5L3Nwb3RpZnkt/bG9nby1icmFuY2Et/d2hpdGUucG5n" alt="spotify-logo" /></li>
                 <Link to="/" className=" p-2 flex font-family-Raleway duration-200 ease-in font-semibold hover:text-slate-100 duration-500 hover:underline hover:underline-offset-4"><svg className="h-6 w-auto icon glyph" fill="#ffffff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="home-alt-2" stroke="#ffffff"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M19.71,9.29l-7-7a1,1,0,0,0-1.42,0l-7,7A1,1,0,0,0,4,10V21a1,1,0,0,0,1,1H8a1,1,0,0,0,.54-.18,1,1,0,0,0,.17-.11,1,1,0,0,0,.11-.17A1,1,0,0,0,9,21V15a1,1,0,0,1,1-1h4a1,1,0,0,1,1,1v6a1,1,0,0,0,1,1h3a1,1,0,0,0,1-1V10A1,1,0,0,0,19.71,9.29Z"></path></g></svg> <h4 className="ml-4">Home</h4></Link>
