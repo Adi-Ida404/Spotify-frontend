@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { SidebarContext } from '../context/SidebarContext'
+import { PlayerContext } from '../context/PlayerContext';
 
 export const Header = () => {
   const navigate = useNavigate();
-  const { showSidebar } = useContext(SidebarContext);
+  const { showSidebar } = useContext(PlayerContext);
 
   if (!showSidebar) {
     console.error('SidebarContext is not properly provided or used');

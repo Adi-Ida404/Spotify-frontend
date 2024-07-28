@@ -1,10 +1,10 @@
 // Sidebar.jsx
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { SidebarContext } from '../context/SidebarContext';
+import { PlayerContext } from '../context/PlayerContext';
 
 export const Sidebar = () => {
-    const { isSidebarVisible, hideSidebar } = useContext(SidebarContext);
+    const { isSidebarVisible, hideSidebar } = useContext(PlayerContext);
 
     return (
         <div className={`fixed top-0 left-0 h-full bg-slate-950 transition-transform transform lg:translate-x-0 lg:relative lg:w-3/12 lg:mr-2 lg:mt-4 rounded-lg z-50 ${isSidebarVisible ? 'translate-x-0' : '-translate-x-full'}`}>

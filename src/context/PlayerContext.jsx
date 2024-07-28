@@ -52,6 +52,12 @@ const PlayerContextProvider = (props) => {
     //     }
     // }
 
+    const [isSidebarVisible, setIsSidebarVisible] = useState(false);
+    
+    const showSidebar = () => setIsSidebarVisible(true);
+    const hideSidebar = () => setIsSidebarVisible(false);
+    
+
     useEffect(()=>{
         setTimeout(() =>{
             audioRef.current.ontimeupdate = ()=>{
@@ -79,7 +85,10 @@ const PlayerContextProvider = (props) => {
         playerStatus, setPlayerStatus,
         time, setTime,
         play, pause
-        ,playWithId
+        ,playWithId,
+        isSidebarVisible,
+        showSidebar,
+        hideSidebar
     }
     return(
         <PlayerContext.Provider value={contextValue}>
