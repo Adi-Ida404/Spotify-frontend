@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { SidebarContext } from '../context/SidebarContext'
-import SidebarContextProvider from '../context/SidebarContext'
 
 export const Header = () => {
   const navigate = useNavigate();
