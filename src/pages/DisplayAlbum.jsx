@@ -20,7 +20,7 @@ export const DisplayAlbum = () => {
             <Header />
             <div className="text-left overflow-y-auto text-white custom-scrollbar p-2" style={{height: "75vh"}}>
                             <div className='flex'>
-                            <img className='w-48 rounded' src={albumData.image} alt=""/>
+                            <img className='w-auto sm:w-48 h-[30vh] sm:h-auto rounded' src={albumData.image} alt=""/>
                             <div className=" ml-4 flex flex-col">
                             <p className='font-bold font-2xl'>Playlist</p>
                             <h2 className='text-5xl font-bold mb-4 md:text-7xl'>{albumData.className} </h2>

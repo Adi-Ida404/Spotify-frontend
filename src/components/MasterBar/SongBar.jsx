@@ -8,7 +8,7 @@ export const SongBar = () => {
 
   return (
     <div className='flex items-center gap-2 bg-slate-900 text-white p-2 border-t border-slate-500'>
-        <img className='w-12' src={track.image} alt=""/>
+        <img className='w-12 border-[1px] border-slate-300' src={track.image} alt=""/>
         <div>
             <p>{track.name}</p>
             <p>{track.desc.slice(0,12)}</p>

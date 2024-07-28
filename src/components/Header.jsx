@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { SidebarContext } from '../context/SidebarContext'
+import SidebarContextProvider from '../context/SidebarContext'
 
 export const Header = () => {
   const navigate = useNavigate();
+  const { showSidebar } = useContext(SidebarContext);
+
+  if (!showSidebar) {
+    console.error('SidebarContext is not properly provided or used');
+    return null;
+}
 
   // Styles for buttons
   const styleButton = "font-semibold mx-2 p-2 rounded-full bg-slate-900 text-slate-400 hover:text-slate-100 hover:bg-slate-800";
@@ -20,6 +28,11 @@ export const Header = () => {
   return (
     <div className='flex border-black bg-slate-900 p-4'>
       <div className='flex text-white items-center'>
+        <button className="block sm:hidden font-semibold mx-2 p-2 rounded-full bg-slate-900 text-slate-400 hover:text-slate-100 hover:bg-slate-800"
+        onClick={showSidebar}
+        >
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="3" x2="21" y1="6" y2="6"/><line x1="3" x2="21" y1="12" y2="12"/><line x1="3" x2="21" y1="18" y2="18"/></svg>
+        </button>
         <button className={styleButton} onClick={handleBackward}>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <line x1="18" x2="18" y1="20" y2="4" />
