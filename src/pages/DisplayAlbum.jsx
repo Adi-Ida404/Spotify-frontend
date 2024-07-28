@@ -14,10 +14,9 @@ export const DisplayAlbum = () => {
 
   return (
     <>
-      <div className='flex' style={{ height: "550px" }}>
+      <div className='flex h-full bg-slate-950'>
         <Sidebar />
-        <div className="bg-slate-950 pt-4 px-2" style={{ width: "950px" }}>
-          <div className="bg-slate-900">
+          <div className="mt-4 bg-slate-900 w-full mr-2 overflow-y-auto">
             <Header />
             <div className="text-left overflow-y-auto text-white custom-scrollbar p-2" style={{ height: "450px" }}>
                             <div className='flex'>
@@ -62,9 +61,7 @@ export const DisplayAlbum = () => {
             <Footer/>
             </div>
           </div>
-        </div>
       </div>
-        <SongBar/>
     </>
   )
 }
