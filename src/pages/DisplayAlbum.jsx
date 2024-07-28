@@ -18,7 +18,7 @@ export const DisplayAlbum = () => {
         <Sidebar />
           <div className="mt-4 bg-slate-900 w-full mr-2 overflow-y-auto rounded-lg">
             <Header />
-            <div className="text-left overflow-y-auto text-white custom-scrollbar p-2" style={{ height: "450px" }}>
+            <div className="text-left overflow-y-auto text-white custom-scrollbar p-2" style={{height: "75vh"}}>
                             <div className='flex'>
                             <img className='w-48 rounded' src={albumData.image} alt=""/>
                             <div className=" ml-4 flex flex-col">

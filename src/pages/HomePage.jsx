@@ -21,7 +21,7 @@ export const Homepage = () => {
         <Sidebar />
         <div className="mt-4 bg-slate-900 w-full mr-2 overflow-y-auto rounded-lg">
           <Header />
-          <div className="overflow-y-auto text-white custom-scrollbar p-2" style={{ height: "450px" }}>
+          <div className="overflow-y-auto text-white custom-scrollbar p-2" style={{height: "75vh"}}>
             <AlbumRow title='Featured'/>
             <Row title="Top Charts" songs={songsData} />
             <Row title="Top Charts" songs={songsData} />

@@ -1,7 +1,7 @@
 export const Footer = () => {
   return (
     <>
-        <div className="flex mt-8 text-left border-b border-t p-4 border-slate-700">
+        <div className="flex mt-8 text-left border-t p-4 border-slate-700" style={{height: "10vh"}}>
             <div className="font-Raleway font-thin text-slate-300 ml-0 sm:ml-8 flex flex-col">
             <h4 className="font-semibold text-slate-100">Company</h4>
             <h4>About</h4>
@@ -39,15 +39,15 @@ export const Footer = () => {
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>            </button>
             </div>
         </div>
-        <div className="flex mt-4 ml-0 sm:ml-8 text-left font-thin text-slate-300">
-        Legal &nbsp;
-        Safety & Privacy Center&nbsp;
-        Privacy Policy&nbsp;
-        Cookies&nbsp;
-        About Ads&nbsp;
-        Accessibility&nbsp;
-        <div className="ml-4 sm:ml-16">© 2024 Spotify AB</div>
-        </div>
+        <div className="flex mt-32 ml-0 sm:pl-10 sm:pt-4 text-left font-thin text-slate-300 relative border-t border-slate-500">
+            Legal &nbsp;
+            Safety & Privacy Center&nbsp;
+            Privacy Policy&nbsp;
+            Cookies&nbsp;
+            About Ads&nbsp;
+            Accessibility&nbsp;
+            <div className="ml-4 sm:ml-16">© 2024 Spotify AB</div>
+          </div>
     </>
   )
 }

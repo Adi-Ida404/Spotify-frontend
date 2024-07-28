@@ -18,7 +18,7 @@ export const Library = () => {
   return (
     <div style={containerStyle}>
       <Sidebar />
-      <div className="mt-4 bg-slate-900 w-full mr-2 overflow-y-auto">
+      <div className="mt-4 bg-slate-900 w-full mr-2 overflow-y-auto text-slate-300">
         <Header/>
         <div className="flex bg-slate-900">
           <Link className="ml-6" to="/searchpage">
@@ -53,9 +53,8 @@ export const Library = () => {
               <button style={{ borderColor: "#424fa8", borderWidth: '0.5px', borderRadius: "40px", width: "95px", backgroundColor: "#111826"}}>Download</button>
             </a>
           </div>
-        </div>
-
-        <div className="overflow-y-auto text-white custom-scrollbar" style={{ height: "450px" }}>
+          </div>
+        <div className="overflow-y-auto text-white custom-scrollbar" style={{ height: "68vh" }}>
           <div id="pagetop" className="bg-slate-900 text-left text-slate-100 font-semibold font-Raleway">
             <div id="genrecard" className="ml-4 p-2">
               <GenreCard />
@@ -91,8 +90,8 @@ export const Library = () => {
               </div>
             </div>
           </div>
+          <Footer />
         </div>
-        <Footer />
       </div>
     </div>
   );
