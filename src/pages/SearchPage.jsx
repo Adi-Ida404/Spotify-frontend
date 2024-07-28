@@ -20,7 +20,7 @@ export const SearchPage = () => {
       <div className="mt-4 bg-slate-900 w-full mr-2 h-auto">
           <Header />
           <div className="overflow-y-auto text-white custom-scrollbar">
-            <div className="bg-slate-900 text-left text-slate-100 font-semibold font-Raleway mt-4 ">
+            <div className="bg-slate-900 text-left text-slate-100 font-semibold font-Raleway mt-4" style={{ height: "450px" }}>
               <div >
                 {/* THE SEARCH HISTORY SONGCARDS */}
                 <Row title="Recent Searches" songs={songs} />
