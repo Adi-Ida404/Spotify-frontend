@@ -15,10 +15,9 @@ export const UserPage = () => {
     };
 
     return (
-        <div style={containerStyle}>
+        <div className='flex h-full bg-slate-950'>
             <Sidebar />
-            <div className="bg-slate-950 pt-4 px-2" style={{ width: "950px", height: '100vh' }}>
-                <div className="bg-slate-900">
+                <div className="mt-4 bg-slate-900 w-full mr-2 overflow-y-auto">
                     <Header />
                     <div className="overflow-y-auto text-white custom-scrollbar p-2" style={{ height: "450px" }}>
                         <div className="bg-slate-900 text-left text-slate-100 font-semibold font-Raleway">
@@ -73,11 +72,10 @@ export const UserPage = () => {
                                     <li>Following4</li>
                                 </ul>
                             </div>
+                            <Footer />
                         </div>
                     </div>
                 </div>
-                <Footer />
             </div>
-        </div>
     );
 };

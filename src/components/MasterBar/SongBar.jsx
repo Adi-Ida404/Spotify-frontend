@@ -7,7 +7,7 @@ export const SongBar = () => {
     const {seekBar, seekBg, playerStatus, play, pause, track, time} = useContext(PlayerContext);
 
   return (
-    <div className='flex items-center gap-2 bg-slate-900 text-white p-2'>
+    <div className='flex items-center gap-2 bg-slate-900 text-white p-2 border-t border-slate-500'>
         <img className='w-12' src={track.image} alt=""/>
         <div>
             <p>{track.name}</p>
