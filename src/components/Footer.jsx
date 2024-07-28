@@ -1,7 +1,7 @@
 export const Footer = () => {
   return (
     <>
-        <div className="flex mt-8 text-left border-t p-4 border-slate-700" style={{height: "10vh"}}>
+        <div className="flex mt-8 text-left border-t p-4 border-slate-700 hidden sm:flex" style={{height: "10vh"}}>
             <div className="font-Raleway font-thin text-slate-300 ml-0 sm:ml-8 flex flex-col">
             <h4 className="font-semibold text-slate-100">Company</h4>
             <h4>About</h4>
