@@ -17,9 +17,9 @@ export const SearchPage = () => {
   return (
     <div className='flex h-full bg-slate-950'>
       <Sidebar />
-      <div className="mt-4 bg-slate-900 w-full mr-2 overflow-y-auto">
+      <div className="mt-4 bg-slate-900 w-full mr-2 h-auto">
           <Header />
-          <div className="overflow-y-auto text-white custom-scrollbar p-2">
+          <div className="overflow-y-auto text-white custom-scrollbar">
             <div className="bg-slate-900 text-left text-slate-100 font-semibold font-Raleway mt-4 ">
               <div >
                 {/* THE SEARCH HISTORY SONGCARDS */}
@@ -27,8 +27,8 @@ export const SearchPage = () => {
               </div>
               {/* THE GENRE CARDS */}
               <GenreCard/>
+              <Footer/>
             </div>
-            <Footer/>
           </div>
         </div>
     </div>

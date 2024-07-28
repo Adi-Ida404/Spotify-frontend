@@ -46,7 +46,7 @@ export const Footer = () => {
         Cookies&nbsp;
         About Ads&nbsp;
         Accessibility&nbsp;
-        <div className="ml-16">© 2024 Spotify AB</div>
+        <div className="ml-4 sm:ml-16">© 2024 Spotify AB</div>
         </div>
     </>
   )
