@@ -10,7 +10,7 @@ import { DisplayAlbum } from './pages/DisplayAlbum.jsx';
 import { useContext } from 'react';
 import { PlayerContext } from './context/PlayerContext.jsx';
 import { SongBar } from './components/MasterBar/SongBar.jsx';
-import SidebarContextProvider from './context/SidebarContext.jsx';
+import SidebarContextProvider from '../src/context/SidebarContext';
 
 
 function App() {
