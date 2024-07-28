@@ -10,14 +10,13 @@ import { DisplayAlbum } from './pages/DisplayAlbum.jsx';
 import { useContext } from 'react';
 import { PlayerContext } from './context/PlayerContext.jsx';
 import { SongBar } from './components/MasterBar/SongBar.jsx';
-import SidebarContextProvider from '../src/context/SidebarContext';
 
 
 function App() {
   const {audioRef, track} = useContext(PlayerContext)
   // const apiUrl = process.en.REACT_APP_BACKEND_URL
   return (
-    <SidebarContextProvider>
+    <>
       <Router>
         <Routes>
         <Route path="/" element={<Homepage />} />
@@ -32,7 +31,7 @@ function App() {
         <SongBar/>
         <audio ref={audioRef} src={track.file} preload='auto'></audio>
       </Router>
-      </SidebarContextProvider>
+      </>
   );
 }
 
