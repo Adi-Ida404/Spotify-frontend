@@ -1,7 +1,7 @@
 // Sidebar.jsx
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { SidebarContext } from '../context/SidebarContext';
+import SidebarContextProvider, { SidebarContext } from '../context/SidebarContext';
 
 export const Sidebar = () => {
     const { isSidebarVisible, hideSidebar } = useContext(SidebarContext);
