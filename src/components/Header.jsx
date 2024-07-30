@@ -19,6 +19,8 @@ export const Header = () => {
     navigate(-1); // Move backward in history
   };
 
+  const firstLetter = name ? name.charAt(0) : '';
+
   return (
     <div className='flex border-black bg-slate-900 p-4'>
       <div className='flex text-white items-center'>
@@ -41,10 +43,12 @@ export const Header = () => {
         </button>
       </div>
       {name ? (
-        <div className='flex text-white ml-auto'>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
-          <span>Welcome, {name}</span>
+        <div className='flex items-center text-white ml-auto'>
+        <div className='w-10 h-10 flex items-center justify-center bg-blue-500 text-white rounded-full font-semibold mr-2'>
+          {firstLetter}
         </div>
+        <span>{name}</span>
+      </div>
       ) : (
         <div className='flex text-white ml-auto'>
           <Link to="/SignUp" className={styleButton}>
