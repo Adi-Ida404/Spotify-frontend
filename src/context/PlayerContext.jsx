@@ -76,6 +76,8 @@ const PlayerContextProvider = (props) => {
         }, 1000);
     },[audioRef])
 
+    const [name, setName] = useState(null);
+
     const contextValue ={
         audioRef,
         seekBg,
@@ -88,7 +90,8 @@ const PlayerContextProvider = (props) => {
         ,playWithId,
         isSidebarVisible,
         showSidebar,
-        hideSidebar
+        hideSidebar,
+        name,setName
     }
     return(
         <PlayerContext.Provider value={contextValue}>

@@ -4,12 +4,7 @@ import { PlayerContext } from '../context/PlayerContext';
 
 export const Header = () => {
   const navigate = useNavigate();
-  const { showSidebar } = useContext(PlayerContext);
-
-  if (!showSidebar) {
-    console.error('SidebarContext is not properly provided or used');
-    return null;
-}
+  const { showSidebar,name } = useContext(PlayerContext);
 
   // Styles for buttons
   const styleButton = "font-semibold mx-2 p-2 rounded-full bg-slate-900 text-slate-400 hover:text-slate-100 hover:bg-slate-800";
@@ -45,14 +40,21 @@ export const Header = () => {
           </svg>
         </button>
       </div>
-      <div className='flex text-white ml-auto'>
-        <Link to={"/SignUp"} className={styleButton}>
-          Sign Up
-        </Link>
-        <Link to={"/Login"} className="bg-white text-slate-900 font-semibold drop-shadow-lg p-2.5 px-4 rounded-full">
-          Log In
-        </Link>
-      </div>
+      {name ? (
+        <div className='flex text-white ml-auto'>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+          <span>Welcome, {name}</span>
+        </div>
+      ) : (
+        <div className='flex text-white ml-auto'>
+          <Link to="/SignUp" className={styleButton}>
+            Sign Up
+          </Link>
+          <Link to="/Login" className="bg-white text-slate-900 font-semibold drop-shadow-lg p-2.5 px-4 rounded-full">
+            Log In
+          </Link>
+        </div>
+      )}
     </div>
   );
 };

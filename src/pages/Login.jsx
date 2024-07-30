@@ -1,10 +1,12 @@
 import axios from 'axios';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { PlayerContext } from '../context/PlayerContext';
 
 export const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const { setName } = useContext(PlayerContext);
   const navigate = useNavigate();
   const apiUrl = import.meta.env.VITE_BACKEND_URL;
 
@@ -12,16 +14,19 @@ export const Login = () => {
     e.preventDefault();
     axios.post(`${apiUrl}/Login`, { email, password })
       .then(result => {
-        console.log(result);
         if (result.data === "Success") {
+          // Optionally set user name here if needed
+          // setName(result.data.userName); // Example: setting the user's name from the response
           navigate(`/`); // Navigate to /home on successful login
         } else {
           console.log("Login failed");
+          // Optionally show an error message to the user
         }
       })
       .catch(err => {
         console.error(err);
         console.log("An error occurred during login");
+        // Optionally show an error message to the user
       });
   };
 
@@ -38,6 +43,18 @@ export const Login = () => {
               type="email"
               id="email"
               name="email"
+              required
+              autoComplete="off"
+            />
+          </div>
+          <div style={styles.inputContainer}>
+            <label style={styles.label} htmlFor="name">Username:</label>
+            <input
+              onChange={(e) => setName(e.target.value)}
+              style={styles.input}
+              type="text"
+              id="name"
+              name="name"
               required
               autoComplete="off"
             />
