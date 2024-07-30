@@ -23,5 +23,5 @@ Integrating RTK:
 1.Using redux toolkit to make personal profile which displays followers and following.
 
 Frontend Enhancement: 
-1. Responsive design for several display sizes 
+1. ~~Responsive design for several display sizes~~
 2. Light mode integration with the use of RTK
