@@ -85,21 +85,24 @@ const styles = {
     alignItems: 'center',
     height: '100vh',
     backgroundColor: '#020617',
+    padding: '0 10px', // Add some horizontal padding for small screens
   },
   formContainer: {
-    width: '40vw',
+    width: '100%',
+    maxWidth: '500px', // Set a max width to limit the form size
     justifyContent: 'center',
     alignItems: 'center',
-    height: '60vh',
-    borderRadius: '10%',
+    height: 'auto',
+    borderRadius: '10px',
     backgroundColor: '#020617',
     padding: '20px',
+    boxSizing: 'border-box', // Ensure padding is included in the width
   },
   heading: {
     textAlign: 'center',
     marginBottom: '20px',
     color: 'white',
-    fontSize: '50px',
+    fontSize: '2.5rem', // Use relative units for font size
     fontWeight: 'bold',
   },
   inputContainer: {
@@ -128,5 +131,14 @@ const styles = {
     borderRadius: '4px',
     cursor: 'pointer',
     marginTop: '10px',
+  },
+  '@media (max-width: 600px)': { // Example of media query for small screens
+    formContainer: {
+      width: '100%',
+      padding: '10px',
+    },
+    heading: {
+      fontSize: '2rem',
+    },
   },
 };
