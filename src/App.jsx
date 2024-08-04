@@ -10,10 +10,11 @@ import { DisplayAlbum } from './pages/DisplayAlbum.jsx';
 import { useContext } from 'react';
 import { PlayerContext } from './context/PlayerContext.jsx';
 import { SongBar } from './components/MasterBar/SongBar.jsx';
+import { SingUpBar } from './components/SignupBar.jsx';
 
 
 function App() {
-  const {audioRef, track} = useContext(PlayerContext)
+  const {audioRef, track, login} = useContext(PlayerContext)
   // const apiUrl = process.en.REACT_APP_BACKEND_URL
   return (
     <>
@@ -28,8 +29,15 @@ function App() {
         <Route path="/userpage" element={<UserPage/>}/>
         <Route path="/album/:id" element={<DisplayAlbum/>}/>
         </Routes>
-        <SongBar/>
-        <audio ref={audioRef} src={track.file} preload='auto'></audio>
+        {login && (
+          <>
+          <SongBar/>
+          <audio ref={audioRef} src={track.file} preload='auto'></audio>
+          </>)}
+          {!login && (
+          <>
+          <SingUpBar/>
+          </>)}
       </Router>
       </>
   );

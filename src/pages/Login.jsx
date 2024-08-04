@@ -6,7 +6,7 @@ import { PlayerContext } from '../context/PlayerContext';
 export const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const { setName } = useContext(PlayerContext);
+  const { setName, setLogin } = useContext(PlayerContext);
   const navigate = useNavigate();
   const apiUrl = import.meta.env.VITE_BACKEND_URL;
 
@@ -17,6 +17,7 @@ export const Login = () => {
         if (result.data === "Success") {
           // Optionally set user name here if needed
           // setName(result.data.userName); // Example: setting the user's name from the response
+          setLogin(true);
           navigate(`/`); // Navigate to /home on successful login
         } else {
           console.log("Login failed");
