@@ -13,10 +13,11 @@ Increased Song Manipulation:
 1. Next and previous songs
 2. Fast forward song
 3. Shuffle songs in the queue.
+4. Personal Playlists
 
 Database Upgradation: 
 1. Song and Album model
-2. Login verification
+2. ~~Login verification~~
 3. Add followers and following to the users model
 
 Integrating RTK: 
