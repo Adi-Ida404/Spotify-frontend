@@ -60,7 +60,7 @@ const PlayerContextProvider = (props) => {
 
     useEffect(()=>{
         setTimeout(() =>{
-            audioRef.current.ontimeupdate = ()=>{
+            audioRef.current.ontimeupdate = ()=>{   
                 seekBar.current.style.width = (Math.floor(audioRef.current.currentTime/audioRef.current.duration*100)) + '%';
                 setTime({
                     currentTime:{
@@ -77,7 +77,7 @@ const PlayerContextProvider = (props) => {
     },[audioRef])
 
     const [name, setName] = useState(null);
-    const [login, setLogin] = useState(false)
+    const [login, setLogin] = useState(false);
 
     const contextValue ={
         audioRef,
