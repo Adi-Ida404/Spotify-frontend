@@ -58,23 +58,44 @@ const PlayerContextProvider = (props) => {
     const hideSidebar = () => setIsSidebarVisible(false);
     
 
-    useEffect(()=>{
-        setTimeout(() =>{
-            audioRef.current.ontimeupdate = ()=>{   
-                seekBar.current.style.width = (Math.floor(audioRef.current.currentTime/audioRef.current.duration*100)) + '%';
+    useEffect(() => {
+        const updateSeekBar = () => {
+            if (audioRef.current) {
+                const currentTime = audioRef.current.currentTime || 0;
+                const duration = audioRef.current.duration || 1; // Avoid division by 0
+    
+                // Update the seek bar width dynamically
+                if (seekBar.current) {
+                    seekBar.current.style.width = `${(currentTime / duration) * 100}%`;
+                }
+    
+                // Update the time state with current and total time
                 setTime({
-                    currentTime:{
-                        second: Math.floor(audioRef.current.currentTime % 60),
-                        minute: Math.floor(audioRef.current.currentTime / 60),
+                    currentTime: {
+                        second: Math.floor(currentTime % 60),
+                        minute: Math.floor(currentTime / 60),
                     },
-                    totalTime:{
-                        second: Math.floor(audioRef.current.duration % 60),
-                        minute: Math.floor(audioRef.current.duration / 60),
-                    }
-                })
+                    totalTime: {
+                        second: Math.floor(duration % 60),
+                        minute: Math.floor(duration / 60),
+                    },
+                });
             }
-        }, );
-    },[audioRef])
+        };
+    
+        // Attach the ontimeupdate event to the audio element
+        if (audioRef.current) {
+            audioRef.current.ontimeupdate = updateSeekBar;
+        }
+    
+        // Cleanup to prevent memory leaks
+        return () => {
+            if (audioRef.current) {
+                audioRef.current.ontimeupdate = null;
+            }
+        };
+    }, []);
+    
 
     const [name, setName] = useState(null);
     const [login, setLogin] = useState(false);
