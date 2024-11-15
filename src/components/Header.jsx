@@ -1,10 +1,12 @@
 import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { PlayerContext } from '../context/PlayerContext';
+import { AuthContext } from '../context/AuthContext';
 
 export const Header = () => {
   const navigate = useNavigate();
-  const { showSidebar,name } = useContext(PlayerContext);
+  const { showSidebar } = useContext(PlayerContext);
+  const { name } = useContext ( AuthContext );
 
   // Styles for buttons
   const styleButton = "font-semibold mx-2 p-2 rounded-full bg-slate-900 text-slate-400 hover:text-slate-100 hover:bg-slate-800";

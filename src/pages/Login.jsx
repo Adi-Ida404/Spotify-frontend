@@ -1,12 +1,12 @@
 import axios from 'axios';
 import { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { PlayerContext } from '../context/PlayerContext';
+import { AuthContext } from '../context/AuthContext';
 
 export const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const { setName, setLogin } = useContext(PlayerContext);
+  const { setName, setLogin } = useContext(AuthContext);
   const navigate = useNavigate();
   const apiUrl = import.meta.env.VITE_BACKEND_URL;
 
