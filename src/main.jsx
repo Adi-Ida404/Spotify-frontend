@@ -1,13 +1,14 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
-import PlayerContextProvider from './context/PlayerContext.jsx'
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import AuthContextProvider from "./context/AuthContext"; // Import the AuthContextProvider
+import PlayerContextProvider from "./context/PlayerContext"; // Import the PlayerContextProvider
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <PlayerContextProvider>
-    <App />
-    </PlayerContextProvider>
-  </React.StrictMode>,
-)
+ReactDOM.render(
+    <AuthContextProvider>
+        <PlayerContextProvider>
+            <App />
+        </PlayerContextProvider>
+    </AuthContextProvider>,
+    document.getElementById("root")
+);
