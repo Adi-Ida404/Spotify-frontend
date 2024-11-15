@@ -65,8 +65,9 @@ const PlayerContextProvider = (props) => {
                 const duration = audioRef.current.duration || 1; // Avoid division by 0
     
                 // Update the seek bar width dynamically
-                if (seekBar.current) {
-                    seekBar.current.style.width = `${(currentTime / duration) * 100}%`;
+                if (seekBar.current && seekBg.current) {
+                    const seekPercentage = (currentTime / duration) * 100;
+                    seekBar.current.style.width = `${seekPercentage}%`;
                 }
     
                 // Update the time state with current and total time
@@ -83,18 +84,25 @@ const PlayerContextProvider = (props) => {
             }
         };
     
-        // Attach the ontimeupdate event to the audio element
         if (audioRef.current) {
+            // Set event listeners for audio element
             audioRef.current.ontimeupdate = updateSeekBar;
+    
+            // Optional: Add onended handler to reset seek bar when song ends
+            audioRef.current.onended = () => {
+                setPlayerStatus(false);
+                if (seekBar.current) seekBar.current.style.width = "0%";
+            };
         }
     
-        // Cleanup to prevent memory leaks
+        // Cleanup function
         return () => {
             if (audioRef.current) {
                 audioRef.current.ontimeupdate = null;
+                audioRef.current.onended = null;
             }
         };
-    }, []);
+    }, [audioRef, seekBar, seekBg]);
     
 
     const [name, setName] = useState(null);
