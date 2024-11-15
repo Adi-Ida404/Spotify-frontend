@@ -11,10 +11,12 @@ import { useContext } from 'react';
 import { PlayerContext } from './context/PlayerContext.jsx';
 import { SongBar } from './components/MasterBar/SongBar.jsx';
 import { SingUpBar } from './components/SignupBar.jsx';
+import { AuthContext } from './context/AuthContext.jsx';
 
 
 function App() {
-  const {audioRef, track, login} = useContext(PlayerContext)
+  const {audioRef, track} = useContext(PlayerContext);
+  const {login} = useContext(AuthContext);
   // const apiUrl = process.en.REACT_APP_BACKEND_URL
   return (
     <>
