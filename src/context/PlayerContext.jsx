@@ -68,6 +68,10 @@ const PlayerContextProvider = (props) => {
                 if (seekBar.current && seekBg.current) {
                     const seekPercentage = (currentTime / duration) * 100;
                     seekBar.current.style.width = `${seekPercentage}%`;
+                    console.log("Current Time:", audioRef.current?.currentTime);
+                    console.log("Duration:", audioRef.current?.duration);
+                    console.log("Seek Width:", seekBar.current?.style.width);
+
                 }
     
                 // Update the time state with current and total time
